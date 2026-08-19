@@ -1,4 +1,5 @@
 using AppLogin.Libraries.Login;
+using AppLogin.Libraries.Middleware;
 using AppLogin.Repository;
 using AppLogin.Repository.Contract;
 
@@ -38,7 +39,7 @@ if (!app.Environment.IsDevelopment())
 
 app.UseCookiePolicy();
 app.UseSession();
-
+app.UseMiddleware<ValidateAntiForgeryTokenMiddleware>();
 app.UseRouting();
 
 app.UseAuthorization();
