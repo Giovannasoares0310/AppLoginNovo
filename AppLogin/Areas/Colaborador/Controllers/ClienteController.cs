@@ -1,4 +1,6 @@
-﻿using AppLogin.Repository.Contract;
+﻿using AppLogin.Models;
+using AppLogin.Models.Constant;
+using AppLogin.Repository.Contract;
 using Microsoft.AspNetCore.Mvc;
 
 namespace AppLogin.Areas.Colaborador.Controllers
@@ -15,6 +17,18 @@ namespace AppLogin.Areas.Colaborador.Controllers
         public IActionResult Index()
         {
             return View(_clienteRepository.ObterTodosClientes());
+        }
+        public IActionResult Cadastrar()
+        {
+            return View();
+        }
+        [HttpPost]
+        public IActionResult Cadastrar([FromForm] Cliente cliente)
+        {
+            cliente.Situacao = SituacaoConstant.Ativo;
+
+            _clienteRepository.Cadastar(cliente);
+            return RedirectToAction(nameof(Cadastrar));
         }
     }
 }

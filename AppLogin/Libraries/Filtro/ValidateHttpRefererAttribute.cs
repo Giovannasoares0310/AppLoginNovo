@@ -7,7 +7,7 @@ namespace AppLogin.Libraries.Filtro
     {
         public void OnActionExecuted(ActionExecutedContext context)
         {
-            string referer = context.HttpContext.Request.Headers["Referer"].ToString()
+            string referer = context.HttpContext.Request.Headers["Referer"].ToString(); 
             if (string.IsNullOrEmpty(referer))
             {
                 context.Result = new ContentResult() { Content = "Acesso Negado!" };

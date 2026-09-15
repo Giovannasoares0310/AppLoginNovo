@@ -1,6 +1,7 @@
 using AppLogin.Libraries.Filtro;
 using AppLogin.Libraries.Login;
 using AppLogin.Models;
+using AppLogin.Models.Constant;
 using AppLogin.Repository.Contract;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
@@ -75,5 +76,8 @@ namespace AppLogin.Controllers
             _loginCliente.Logout();
             return RedirectToAction(nameof(Index));
         }
+
     }
+
+
 }
