@@ -13,7 +13,6 @@ CPF Varchar(11) not null,
 Telefone Varchar(14) not null,
 Email Varchar(50) not null,
 Senha Varchar(8) not null,
-ConfirmacaoSenha Varchar(8) not null,
 Situacao char(1) not null
 );
 
@@ -27,6 +26,6 @@ Tipo Varchar(8) not null,
 Telefone Varchar(11) not null
 );
 
-insert into Cliente values (default, "Giovanna", "2008-10-03", "F", "12345678910", "11999999999999", "giovanna@gmail.com", "12345678", "12345678", "A");
+insert into Cliente values (default, "Giovanna", "2008-10-03", "F", "12345678910", "11999999999999", "giovanna@gmail.com", "12345678", "A");
 
 insert into Colaborador values(default, "Giovanna", "Lauraxavi@gmail.com", "12345678", "Adm", "11999999999");
