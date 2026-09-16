@@ -1882,7 +1882,6 @@ C:\Users\3mtec\Desktop\AppLoginNovo\AppLogin\bin\Debug\net10.0\runtimes\win-x64\
 C:\Users\3mtec\Desktop\AppLoginNovo\AppLogin\bin\Debug\net10.0\runtimes\win-x64\native\k5sprt64.dll
 C:\Users\3mtec\Desktop\AppLoginNovo\AppLogin\bin\Debug\net10.0\runtimes\win-x64\native\krb5_64.dll
 C:\Users\3mtec\Desktop\AppLoginNovo\AppLogin\bin\Debug\net10.0\runtimes\win-x64\native\krbcc64.dll
-C:\Users\3mtec\Desktop\AppLoginNovo\AppLogin\bin\Debug\net10.0\runtimes\win\lib\net8.0\System.Windows.Extensions.dll
 C:\Users\3mtec\Desktop\AppLoginNovo\AppLogin\obj\Debug\net10.0\AppLogin.csproj.AssemblyReference.cache
 C:\Users\3mtec\Desktop\AppLoginNovo\AppLogin\obj\Debug\net10.0\rpswa.dswa.cache.json
 C:\Users\3mtec\Desktop\AppLoginNovo\AppLogin\obj\Debug\net10.0\AppLogin.GeneratedMSBuildEditorConfig.editorconfig
@@ -2568,3 +2567,4 @@ C:\Users\3MTEC\Desktop\AppLogin\AppLoginNovo\AppLogin\obj\Debug\net10.0\refint\A
 C:\Users\3MTEC\Desktop\AppLogin\AppLoginNovo\AppLogin\obj\Debug\net10.0\AppLogin.pdb
 C:\Users\3MTEC\Desktop\AppLogin\AppLoginNovo\AppLogin\obj\Debug\net10.0\AppLogin.genruntimeconfig.cache
 C:\Users\3MTEC\Desktop\AppLogin\AppLoginNovo\AppLogin\obj\Debug\net10.0\ref\AppLogin.dll
+C:\Users\3mtec\Desktop\AppLoginNovo\AppLogin\bin\Debug\net10.0\runtimes\win\lib\net10.0\System.Windows.Extensions.dll
