@@ -1,5 +1,7 @@
 ﻿using AppLogin.Libraries.Filtro;
+using AppLogin.Models;
 using AppLogin.Models.Constant;
+using AppLogin.Repository.Contract;
 using Microsoft.AspNetCore.Mvc;
 
 namespace AppLogin.Areas.Colaborador.Controllers
@@ -9,9 +11,41 @@ namespace AppLogin.Areas.Colaborador.Controllers
 
     public class ColaboradorController : Controller
     {
+        private IColaboradorRepository _colaboradorRepository;
+
+        public ColaboradorController(IColaboradorRepository colaboradorRespository)
+        {
+            _colaboradorRepository = colaboradorRespository;
+        }
+
         public IActionResult Index()
+        {
+            return View(_colaboradorRepository.ObterTodosColaboradores());
+        }
+
+        [HttpGet]
+        public IActionResult Cadastrar()
         {
             return View();
         }
+
+        [HttpPost]
+        public IActionResult Cadastrar(Models.Colaborador colaborador)
+        {
+            colaborador.Tipo = ColaboradorTipoConstant.Comum;
+
+            _colaboradorRepository.Cadastrar(colaborador);
+            TempData["MSG_S"] = "Registro salvo com Sucesso!";
+
+                return RedirectToAction(nameof(Index));
+        }
+
+        [ValidateHttpReferer]
+        public IActionResult Excluir (int id)
+        {
+            _colaboradorRepository.Excluir(id);
+            return RedirectToAction(nameof(Index));
+        }
     }
 }
+
