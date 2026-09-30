@@ -20,6 +20,7 @@ create table Colaborador
 (
 Id int auto_increment primary key,
 Nome Varchar(50) not null,
+CPF Varchar(11) not null,
 Email Varchar(50) not null,
 Senha Varchar(8) not null,
 Tipo Varchar(8) not null,
@@ -28,4 +29,7 @@ Telefone Varchar(11) not null
 
 insert into Cliente values (default, "Giovanna", "2008-10-03", "F", "12345678910", "11999999999999", "giovanna@gmail.com", "12345678", "A");
 
-insert into Colaborador values(default, "Giovanna", "Lauraxavi@gmail.com", "12345678", "Adm", "11999999999");
+select * from Cliente;
+select * from Colaborador;
+
+insert into Colaborador values(default, "Giovanna", 12312312365, "Lauraxavi@gmail.com", "12345678", "G", "11999999999");

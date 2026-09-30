@@ -33,8 +33,9 @@
 
             <td>
                 <a asp-action="Atualizar" asp-route-id="@colaborador.Id class="btn btn-secondary">Atualizar</a> 
-                <a asp-action="Excluir" asp-route-id="@colaborador.Id class="btn btn-Danger" 
-                            onclick="return confirm('Deseja Realmente Excluir')">Excluir</a>
+
+                <a asp-action="Excluir" asp-route-id="@colaborador.Id" class="btn btn-Danger" 
+                            onclick="return confirm('Deseja Realmente Excluir?')">Excluir</a>
             </td>
         </tr>
 }

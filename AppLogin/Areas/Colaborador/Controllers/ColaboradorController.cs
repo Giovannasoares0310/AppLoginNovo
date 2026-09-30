@@ -46,6 +46,28 @@ namespace AppLogin.Areas.Colaborador.Controllers
             _colaboradorRepository.Excluir(id);
             return RedirectToAction(nameof(Index));
         }
+
+        [ValidateHttpReferer]
+        public IActionResult Atualizar (int id)
+        {
+            Models.Colaborador colaborador = _colaboradorRepository.ObterColaborador(id);
+            return View(colaborador);
+        }
+
+        [HttpPost]
+        public IActionResult Atualizar([FromForm] Models.Colaborador colaborador)
+        {
+            if (ModelState.IsValid)
+            {
+                _colaboradorRepository.Atualizar(colaborador);
+
+                TempData["MSG_S"] = "Registro salvo com sucesso!";
+
+                return RedirectToAction(nameof(Index));
+            }
+
+            return View();
+        }
     }
 }
 
